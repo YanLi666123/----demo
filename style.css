@@ -22,6 +22,7 @@ body {
   border-radius: 12px;          /* 圆角 */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 阴影，增加立体感 */
   padding: 24px;
+  transform: translateY(-300px); /* 把卡片整体向上移动 300px */
 }
 
 .card h1 {
