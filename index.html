@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的待办清单</title>
+  <!-- 引入 CSS 文件 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 页面主体内容：一个卡片 -->
+  <div class="card">
+    <h1>📝 我的待办清单</h1>
+
+    <!-- 输入框 + 添加按钮，用来新增待办 -->
+    <div class="input-area">
+      <input type="text" id="todo-input" placeholder="输入要做的事，按回车或点添加">
+      <button id="add-btn">添加</button>
+    </div>
+
+    <!-- 待办列表，JS 会把内容动态生成到这里 -->
+    <ul id="todo-list"></ul>
+
+    <!-- 底部统计信息 -->
+    <p class="footer" id="todo-count">共 0 项</p>
+  </div>
+
+  <!-- 引入 JS 文件（放在 body 最后，保证先加载完 HTML 再执行 JS） -->
+  <script src="script.js"></script>
+</body>
+</html>

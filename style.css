@@ -1,0 +1,112 @@
+/* ===== 全局样式 ===== */
+/* box-sizing 让元素的内边距和边框都算在宽度内，排版更好控制 */
+* {
+  box-sizing: border-box;
+}
+
+/* body：给整个页面设置背景色，并让内容水平和垂直居中 */
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2); /* 渐变背景色 */
+  min-height: 100vh;            /* 至少撑满一屏高度 */
+  display: flex;                /* 弹性布局，配合下面两行实现居中 */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* ===== 卡片容器 ===== */
+.card {
+  width: 400px;
+  background: #fff;
+  border-radius: 12px;          /* 圆角 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 阴影，增加立体感 */
+  padding: 24px;
+}
+
+.card h1 {
+  font-size: 22px;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+/* ===== 输入区 ===== */
+.input-area {
+  display: flex;                /* 让输入框和按钮横排 */
+  gap: 8px;                     /* 两者之间的间距 */
+  margin-bottom: 16px;
+}
+
+#todo-input {
+  flex: 1;                      /* 输入框占满剩余宽度 */
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* 聚焦时输入框的边框变色，给用户反馈 */
+#todo-input:focus {
+  border-color: #667eea;
+}
+
+#add-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background: #667eea;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 鼠标悬停在按钮上时变亮一点（hover 伪类） */
+#add-btn:hover {
+  background: #5a6fd6;
+}
+
+/* ===== 待办列表 ===== */
+#todo-list {
+  list-style: none;             /* 去掉默认的项目符号 */
+  padding: 0;
+  margin: 0;
+}
+
+#todo-list li {
+  display: flex;                /* 文字和删除按钮横排 */
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+/* 点击「✅」完成后的样式：文字变灰加删除线 */
+#todo-list li.done {
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* 删除按钮 */
+#todo-list li button {
+  border: none;
+  background: #ff6b6b;
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#todo-list li button:hover {
+  background: #e25555;
+}
+
+/* ===== 底部统计 ===== */
+.footer {
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  margin: 16px 0 0 0;
+}
